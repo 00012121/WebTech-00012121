@@ -1,4 +1,4 @@
-# TICKET BOOKING APPLICATION Allows people to order ticket 
+# TICKET BOOKING APPLICATION 
 
 This page's aim is to get clients' information who ordered ticket from this agency
 

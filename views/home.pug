@@ -1,6 +1,9 @@
 extends layout.pug
 
+
+
 block bookingForm 
+
     if error 
         p.error Some information is missing, please fill in empty spaces 
 
@@ -8,6 +11,7 @@ block bookingForm
         p.success All done, we will contact you soon
     if deleted 
         p.success Deleted successfully
+
 
     form.form(action='/add' method='POST')
         input.country(type='text' placeholder='Name of the country, city...' name = 'country')
