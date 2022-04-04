@@ -1,0 +1,38 @@
+extends layout.pug
+
+block bookingForm 
+    if error 
+        p.error Some information is missing, please fill in empty spaces 
+
+    if success
+        p.success All done, we will contact you soon
+    if deleted 
+        p.success Deleted successfully
+
+    form.form(action='/add' method='POST')
+        input.country(type='text' placeholder='Name of the country, city...' name = 'country')
+        input.number(type='number' pattern ='[0-9]+' maxlength='15' minlength='1' placeholder = 'Number of people' name='number' required)
+        input.phone(type='phone' pattern ='+[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}' maxlength='17' minlength='5' placeholder = 'Phone: +998-XX-XXX-XX-XX' name='phone' required)
+        input.email(type='email' placeholder = 'Email' name='email' required)
+        button.btn Add
+
+    div.bookings
+        if bookings.length
+            each booking in bookings
+                div.booked
+                    div
+                        p.label Country:      
+                        p.book #{ booking.country}
+                    div
+                        p.label People:   
+                        p.book #{ booking.people}
+                    div 
+                        p.label Phone number:        
+                        p.book #{ booking.phone}
+                    div 
+                        p.label Email:        
+                        p.book #{ booking.email}
+                    span 
+                    a.delete(href=`/${booking.id}/delete`) Delete 
+        else 
+            p.nobooked No booked tickets here yet

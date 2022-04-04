@@ -1,0 +1,151 @@
+:root {
+    font-family: 'Roboto Slab', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(https://cdn.shopify.com/s/files/1/0562/7651/7027/products/nebraska-engineer-embossing-seal-in-use-2_1600x.jpg?v=1626974404);
+    padding: 10%;
+    max-width: 1100px;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: 50px auto;
+}
+
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 20px 20px rgb(253, 253, 253);
+    margin: 0 25% 1rem 25%;
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    display: inline-block;
+    padding: 8px;
+    font-size: .8rem;
+    width: 22%;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    border: blue;
+    box-shadow: 0px 0px 10px 3px rgba(43, 7, 247, 0.6);
+    ;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 10%;
+    border: none;
+    background: blue;
+    color: white;
+}
+
+.btn:active {
+    background-color: rgb(255, 255, 255);
+    color: blue;
+    box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, 0.4);
+}
+
+.btn:hover {
+    background-color: white;
+    color: blue;
+}
+
+.bookings {
+    padding: 10px;
+    margin-top: 25px;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+
+.booked {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+}
+
+.booked:hover {
+    background-color: rgba(202, 199, 199, 0.822);
+}
+
+.booked:last-child {
+    border-bottom: none;
+}
+
+.booked>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.book {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.label {
+    font-weight: bold;
+    width: 100%;
+    margin: 0 1rem 0 1rem;
+}
+
+.nobooked {
+    background-color: rgba(225, 250, 5, 0.4);
+    padding: 10px;
+    font-size: 1.5rem;
+    box-shadow: 0 0 5px 5px rgba(225, 250, 5, 0.4);
+    ;
+}
+
+.success {
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 98%;
+    background-color: rgb(117, 185, 117);
+    border: 1px solid rgb(49, 129, 49);
+}
+
+.error {
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 98%;
+    background-color: rgb(243, 104, 104);
+    border: 1px solid rgb(184, 46, 46);
+}
+
+.span {
+    display: flex;
+
+}
+
+.delete {
+    align-self: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: red;
+    color: wheat;
+}
